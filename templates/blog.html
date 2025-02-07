@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Блог о Flask</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <nav>
+        <a href="/">Главная</a> |
+        <a href="/blog">Блог</a> |
+        <a href="/contacts">Контакты</a>
+    </nav>
+    <h1>Блог о Flask</h1>
+    <p>Flask — это легковесный веб-фреймворк для Python, который позволяет создавать мощные веб-приложения с минимальными усилиями.</p>
+
+    <h2>Основные возможности Flask</h2>
+    <ul>
+        <li>Простота в использовании и настройке</li>
+        <li>Гибкость в разработке</li>
+        <li>Поддержка расширений</li>
+        <li>Использование шаблонов Jinja2</li>
+        <li>Встроенный сервер разработки</li>
+    </ul>
+
+    <h2>Пример простого приложения на Flask</h2>
+    <pre>
+        <code>
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "Привет, Flask!"
+
+if __name__ == "__main__":
+    app.run(debug=True)
+        </code>
+    </pre>
+
+    <h2>Работа с шаблонами</h2>
+    <p>Flask использует Jinja2 для динамического создания HTML-страниц. Пример шаблона:</p>
+    <pre>
+        <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+        &lt;head&gt;
+            &lt;title&gt;Пример Flask&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;h1&gt;{{ title }}&lt;/h1&gt;
+            &lt;p&gt;{{ content }}&lt;/p&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+        </code>
+    </pre>
+
+    <h2>Заключение</h2>
+    <p>Flask — отличный выбор для начинающих и опытных разработчиков. Он позволяет быстро разрабатывать веб-приложения, API и прототипы.</p>
+</body>
+</html>
